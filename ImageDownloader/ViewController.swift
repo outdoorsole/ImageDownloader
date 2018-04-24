@@ -44,9 +44,9 @@ class ViewController: UIViewController {
                 displayImage = UIImage(data: imageData)
             }
             
-            // 6) Pass this line back to the main thread.
+            // 6) Pass this line back to the main thread. Set the self.theImage to displayImage
             DispatchQueue.main.async {
-                //
+                self.theImage.image = displayImage
             }
         }
         
