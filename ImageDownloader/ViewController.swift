@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loadImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +50,8 @@ class ViewController: UIViewController {
                 self.theImage.image = displayImage
             }
         }
-        
+        // 7) Start the task running
+        task.resume()
     }
 }
 
