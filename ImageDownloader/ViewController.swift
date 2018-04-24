@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     func loadImage() {
         // 1) Create URL instance
         let northernURL = URL(string: "https://apod.nasa.gov/apod/image/1804/DragonAurora_Bastoni_4240.jpg")!
+        
+        // 2) Create the URL task for the northernURL
+        let task = URLSession.shared.dataTask(with: northernURL) {
+            (data, response, error) in
+        }
+        
     }
 }
 
