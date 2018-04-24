@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var theImage: UIImageView!
+    @IBOutlet weak var imageStateLabel: UILabel!
     
     let URLStrings = [
         "https://upload.wikimedia.org/wikipedia/commons/e/e5/SF-Giants-Logo.jpg",
@@ -29,22 +30,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if imageStateLabel.text != nil {
+            imageStateLabel.text = "No Image Selected"
+        }
     }
     
     @IBAction func loadImagePressed(_ sender: UIButton) {
         loadImage()
+        imageStateLabel.text = ""
     }
     
     func loadImage() {
         // Select random string from URLStrings array
         let urlString = selectUrlString(number: randomNumGenerator())
         // 1) Create URL instance
-        let northernURL = URL(string: "urlString")!
+        let northernURL = URL(string: urlString)!
         
         // 2) Create the URL task for the northernURL
         let task = URLSession.shared.dataTask(with: northernURL) {
