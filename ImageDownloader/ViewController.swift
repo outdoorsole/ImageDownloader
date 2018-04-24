@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         // 2) Create the URL task for the northernURL
         let task = URLSession.shared.dataTask(with: northernURL) {
             (data, response, error) in
+            print("in the data completion handler")
+            
+            // 3) Declare a UIImage var to hold the image, named displayImage
+            var displayImage: UIImage
         }
         
     }
