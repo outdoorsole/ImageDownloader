@@ -38,8 +38,10 @@ class ViewController: UIViewController {
     }
 
     func loadImage() {
+        // Select random string from URLStrings array
+        let urlString = selectUrlString(number: randomNumGenerator())
         // 1) Create URL instance
-        let northernURL = URL(string: "https://apod.nasa.gov/apod/image/1804/DragonAurora_Bastoni_4240.jpg")!
+        let northernURL = URL(string: urlString)!
         
         // 2) Create the URL task for the northernURL
         let task = URLSession.shared.dataTask(with: northernURL) {
@@ -71,6 +73,10 @@ class ViewController: UIViewController {
     
     func randomNumGenerator() -> Int {
         return Int(arc4random_uniform(10))
+    }
+    
+    func selectUrlString(number: Int) -> String {
+        return URLStrings[number]
     }
 }
 
