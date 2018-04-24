@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theImage: UIImageView!
     @IBOutlet weak var imageStateLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let URLStrings = [
         "https://upload.wikimedia.org/wikipedia/commons/e/e5/SF-Giants-Logo.jpg",

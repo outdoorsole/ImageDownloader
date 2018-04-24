@@ -40,16 +40,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UK-sY-VSE">
-                                <rect key="frame" x="188" y="235" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187" y="235" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WwW-q0-YEA">
+                                <rect key="frame" x="169" y="217" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1UK-sY-VSE" firstAttribute="centerY" secondItem="av8-ph-jHN" secondAttribute="centerY" id="3MP-m8-d4h"/>
+                            <constraint firstItem="WwW-q0-YEA" firstAttribute="centerY" secondItem="av8-ph-jHN" secondAttribute="centerY" id="NPf-Vb-tjA"/>
                             <constraint firstItem="G6D-f2-gU4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFJ-sc-Jfk"/>
+                            <constraint firstItem="WwW-q0-YEA" firstAttribute="centerX" secondItem="av8-ph-jHN" secondAttribute="centerX" id="VEi-tl-Nc8"/>
                             <constraint firstItem="av8-ph-jHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z3g-19-pug"/>
                             <constraint firstItem="1UK-sY-VSE" firstAttribute="centerX" secondItem="av8-ph-jHN" secondAttribute="centerX" id="h1M-2A-Fgm"/>
                             <constraint firstItem="G6D-f2-gU4" firstAttribute="top" secondItem="av8-ph-jHN" secondAttribute="bottom" constant="80" id="l0h-hM-WeT"/>
@@ -58,6 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="WwW-q0-YEA" id="9u4-Tj-42p"/>
                         <outlet property="imageStateLabel" destination="1UK-sY-VSE" id="a7G-pc-VB7"/>
                         <outlet property="theImage" destination="av8-ph-jHN" id="pcb-wT-jA8"/>
                     </connections>
