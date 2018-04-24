@@ -44,12 +44,11 @@ class ViewController: UIViewController {
         // Select random string from URLStrings array
         let urlString = selectUrlString(number: randomNumGenerator())
         // 1) Create URL instance
-        let northernURL = URL(string: urlString)!
+        let northernURL = URL(string: "urlString")!
         
         // 2) Create the URL task for the northernURL
         let task = URLSession.shared.dataTask(with: northernURL) {
             (data, response, error) in
-            print("in the data completion handler")
             
             // 3) Declare a UIImage var to hold the image, named displayImage
             var displayImage: UIImage?
