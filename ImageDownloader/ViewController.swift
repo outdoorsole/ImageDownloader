@@ -29,14 +29,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadImage()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func loadImagePressed(_ sender: UIButton) {
+        loadImage()
+    }
+    
     func loadImage() {
         // Select random string from URLStrings array
         let urlString = selectUrlString(number: randomNumGenerator())
