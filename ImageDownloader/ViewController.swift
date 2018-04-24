@@ -36,6 +36,11 @@ class ViewController: UIViewController {
             if error != nil {
                 print("Error in loadImage: \(error)")
             }
+            
+            // 5) Process the data with an if-let, and if available, try to create a UIImage from the data
+            if let imageData = data {
+                displayImage = UIImage(data: imageData)
+            }
         }
         
     }
