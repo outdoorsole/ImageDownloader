@@ -31,6 +31,11 @@ class ViewController: UIViewController {
             
             // 3) Declare a UIImage var to hold the image, named displayImage
             var displayImage: UIImage
+            
+            // 4) If there is an error, then print it
+            if error != nil {
+                print("Error in loadImage: \(error)")
+            }
         }
         
     }
