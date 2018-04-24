@@ -12,6 +12,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theImage: UIImageView!
     
+    let URLStrings = [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e5/SF-Giants-Logo.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/opo0328a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/heic0506a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/heic0206b.jpg",
+        "https://cdn.spacetelescope.org/archives/images/wallpaper5/potw1538a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/heic0604a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/potw1442a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/opo9925a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/potw1119a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/potw1108a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/opo9919i.jpg"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
