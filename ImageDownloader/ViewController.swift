@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var theImage: UIImageView!
     @IBOutlet weak var imageStateLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: - Properties
     let URLStrings = [
         "https://upload.wikimedia.org/wikipedia/commons/e/e5/SF-Giants-Logo.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/opo0328a.jpg",
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         "https://cdn.spacetelescope.org/archives/images/screen/opo9919i.jpg"
     ]
     
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,12 +39,14 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - IBActions
     @IBAction func loadImagePressed(_ sender: UIButton) {
         imageStateLabel.text = ""
         self.activityIndicator.startAnimating()
         loadImage()
     }
-    
+ 
+    // MARK: - Helper methods
     func loadImage() {
         // Select random string from URLStrings array
         let urlString = selectUrlString(number: randomNumGenerator())
