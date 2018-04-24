@@ -35,9 +35,10 @@ class ViewController: UIViewController {
             // 3) Declare a UIImage var to hold the image, named displayImage
             var displayImage: UIImage?
             
-            // 4) If there is an error, then print it
-            if error != nil {
+            // 4) Process the error with an if-let. If there is an error, then print it and set displayImage to nil
+            if let error = error {
                 print("Error in loadImage: \(error)")
+                displayImage = nil
             }
             
             // 5) Process the data with an if-let, and if available, try to create a UIImage from the data
