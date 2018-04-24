@@ -37,8 +37,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadImagePressed(_ sender: UIButton) {
-        loadImage()
         imageStateLabel.text = ""
+        self.activityIndicator.startAnimating()
+        loadImage()
     }
     
     func loadImage() {
@@ -67,6 +68,7 @@ class ViewController: UIViewController {
             
             // 6) Pass this line back to the main thread. Set the self.theImage to displayImage
             DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
                 self.theImage.image = displayImage
             }
         }
