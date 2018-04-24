@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             print("in the data completion handler")
             
             // 3) Declare a UIImage var to hold the image, named displayImage
-            var displayImage: UIImage
+            var displayImage: UIImage?
             
             // 4) If there is an error, then print it
             if error != nil {
@@ -40,6 +40,11 @@ class ViewController: UIViewController {
             // 5) Process the data with an if-let, and if available, try to create a UIImage from the data
             if let imageData = data {
                 displayImage = UIImage(data: imageData)
+            }
+            
+            // 6) Pass this line back to the main thread.
+            DispatchQueue.main.async {
+                //
             }
         }
         
