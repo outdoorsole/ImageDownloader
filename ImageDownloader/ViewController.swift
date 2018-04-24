@@ -68,5 +68,9 @@ class ViewController: UIViewController {
         // 7) Start the task running
         task.resume()
     }
+    
+    func randomNumGenerator() -> Int {
+        return Int(arc4random_uniform(10))
+    }
 }
 
