@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func loadImage() {
+        // 1) Create URL instance
+        let northernURL = URL(string: "https://apod.nasa.gov/apod/image/1804/DragonAurora_Bastoni_4240.jpg")!
+    }
 }
 
